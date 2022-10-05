@@ -30,7 +30,7 @@ class Result {
     }
 
     public static int countSumPower(int num, int power, int curr, int carry, int count){
-        System.out.println("Entered %d".formatted(countNumber));
+//        System.out.println("Entered %d".formatted(countNumber));
         countNumber++;
     	int sum = carry + (int) Math.pow(curr,power);
         if (sum == num)

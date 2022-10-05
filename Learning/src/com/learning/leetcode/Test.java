@@ -1,35 +1,22 @@
 package com.learning.leetcode;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Test {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-//		String a = "aaabbbcc";
+	public static void main (String[] args) {
+		int[] l = {7,5,4,6,3,9,2,1};
 		
-		String a = "aabbbabaabbcc";
-		
-		Map<Character, Integer> map = new HashMap<>();
-		
-		for(int i=0;i<a.length();i++) {
-			char b = a.charAt(i);
-			if(map.containsKey(b)) {
-				int cnt = map.get(b);
-				cnt++;
-				map.replace(b, cnt);
-			} else {
-				map.put(b, 1);
+		for(int i=0;i<l.length;i++) {
+			for(int j=0;j<l.length-1;j++) {
+				if(l[j]>l[j+1]) {
+					int tmp = l[j];
+					l[j] = l[j+1];
+					l[j+1] = tmp;
+				}
 			}
 		}
-		
-		System.out.println(map);
-	     
+		System.out.println(Arrays.toString(l));
 	}
-
+	
 }
