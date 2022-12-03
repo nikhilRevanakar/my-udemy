@@ -9,8 +9,9 @@ public class SelectionSort {
 		int[] l = {7,5,4,6,3,9,2,1};
 		int n = l.length;
 		
-		for(int i=0;i<l.length;i++) {
+		for(int i=0;i<l.length-1;i++) {
 			int minIndex = i;
+			System.out.println("MinIndex:"+i);
 			for(int j=i+1;j<l.length;j++) {
 				if(l[j]< l[minIndex]) {
 					minIndex = j;
