@@ -85,6 +85,12 @@ public class Quota implements Serializable{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+	@Override
+	public String toString() {
+		return "Quota [quotaId=" + quotaId + ", clientId=" + clientId + ", currentCnt=" + currentCnt
+				+ ", subscribedCnt=" + subscribedCnt + ", isQuotaExceeded=" + isQuotaExceeded + "]";
+	}
 	
 	
 

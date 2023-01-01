@@ -5,6 +5,8 @@ import java.util.*;
 public class Test {
 
 	public static void main (String[] args) {
+		int r = 15 / 20;
+		System.out.println(r);
 		int[] l = {7,5,4,6,3,9,2,1};
 		
 		bubbleSor(l);

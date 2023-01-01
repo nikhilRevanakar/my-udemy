@@ -35,7 +35,7 @@ public class ArrangingCoinsSimpleWay {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int res = arrangeCoins(1804289383);
+		int res = arrangeCoins(8);
 		System.out.println(res);
 	}
 	public static int arrangeCoins(int n) {
