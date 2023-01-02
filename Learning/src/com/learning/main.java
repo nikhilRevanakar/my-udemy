@@ -18,29 +18,37 @@ public class main {
 //        [1, 1, 2, 1, 1, 2, 4, 5, 3]
 // 		[2, 2, 3, 3, 5, 5, 7, 9, 10]
 		
-		int[] a = {1, 4, 3, 2, 6, 7};
-		System.out.println(minJumps(a));
+		int[] a = {2,2,1,1,2,2,1,0,1,2,1,0,1,0,2,2,2,1,1,2,1,2,1,0,0,0,1,2,2,1,1,2,2,1,0,1,2,1,0,1,0,2,2,2,1,1,2,1,2,1,0,0,0,1,2,2,1,1,2,2,1,0,1,2,1,0,1,0,2,2,2,1,1,2,1,2,1,0,0,0,1,2,2,1,1,2,2,1,0,1,2,1,0,1,0,2,2,2,1,1,2,1,2,1,0,0,0,1};
+		quick(a, 0, a.length-1);
+		System.out.println(Arrays.toString(a));
 	}
 	
-	 static int minJumps(int[] a){
-		 int jumps = 0;
-	        int idx = 0;
-	        while(idx<a.length) {
-	            if(a[idx]==0) {
-	                return -1;
-	            }
-	            
-	            idx = idx+a[idx];
-	           
-	            if(idx!=a.length-1) {
-	            	jumps++;
-	            }
-	            
-	        }
-		       
-		       
-		       return jumps;
-	    }
-	
+	 
+    public static int pivot(int[] a, int pivotIndex, int endIndex) {
+        int swapIndex = pivotIndex;
+        
+        for(int i=pivotIndex+1;i<=endIndex;i++) {
+            if(a[i]<a[pivotIndex]) {
+                swapIndex++;
+                swap(a, swapIndex, i);
+            }
+        }
+        swap(a, pivotIndex, swapIndex);
+        return swapIndex;
+    }
+    
+    public static void quick(int[] a, int left, int right) {
+        if(left<right){
+            int piv = pivot(a, left, right);
+            quick(a, left, piv-1);
+            quick(a, piv+1, right);
+        }
+    }
+    
+    public static void swap(int[] a, int first, int last ) {
+        int tmp = a[first];
+        a[first] = a[last];
+        a[last] = tmp;
+    }
 	
 }
