@@ -2,6 +2,7 @@ package com.GeekForGeek;
 
 public class SortAnArrayOf0s1sand2s {
 
+	//https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1?page=1&curated[]=1&sortBy=submissions
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] a = {0, 2, 1, 2, 0};
