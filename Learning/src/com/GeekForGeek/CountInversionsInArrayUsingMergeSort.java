@@ -40,6 +40,7 @@ class CountInversionsInArrayUsingMergeSort
         int j=0;
         int p=0;
         int q=0;
+
         
         while(i<left.length && j<right.length) {
             while(p<left.length && q<right.length) {
