@@ -1,14 +1,18 @@
 package com.learning;
 
 import java.util.Arrays;
+import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.PriorityQueue;
 import java.util.stream.IntStream;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class main {
 
@@ -19,21 +23,31 @@ public class main {
 //        [1, 1, 2, 1, 1, 2, 4, 5, 3]
 // 		[2, 2, 3, 3, 5, 5, 7, 9, 10]
 		
-		int[] a = {2,2,1,1,2,2,1,0,1,2,1,0,1,0,2,2,2,1,1,2,1,2,1,0,0,0,1,2,2,1,1,2,2,1,0,1,2,1,0,1,0,2,2,2,1,1,2,1,2,1,0,0,0,1,2,2,1,1,2,2,1,0,1,2,1,0,1,0,2,2,2,1,1,2,1,2,1,0,0,0,1,2,2,1,1,2,2,1,0,1,2,1,0,1,0,2,2,2,1,1,2,1,2,1,0,0,0,1};
-//		quick(a, 0, a.length-1);
 		
-        IntStream.range(1, 10)
-        .filter(s -> { if(s%3==0 || s%5==0) {
-            return true;
-        } else {
-        return false;
-        }})
-        .forEach(System.out::println);
-        
-//        System.out.println(sum);
-
+		TreeSet<Integer> p = new TreeSet<>();
+		p.add(30);
+		p.add(29);
+		p.add(88);
+		p.add(11);
+		p.add(60);
+		
+		ConcurrentHashMap<String, String> m = new ConcurrentHashMap<>();
+		
+		System.out.println(p);
 	}
 	
+	static int sumA(int a, int b) {
+		if(b==0) return a;
+		
+
+		System.out.println("a:b "+a+" "+b);
+		int sum = a^b;
+
+		System.out.println("sum: "+sum);
+		int cry = (a & b) << 1;
+		System.out.println("cry: "+cry);
+		return sumA(sum, cry);
+	}
 	 
     public static int pivot(int[] a, int pivotIndex, int endIndex) {
         int swapIndex = pivotIndex;

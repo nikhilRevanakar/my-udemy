@@ -100,6 +100,11 @@ Behavioural DP
 -------------------
 **Iterator**
 	-> It iterates over the elements in sequence from a aggregated object while hiding underlying data structure used.
+	-> Iterators are stateful, meaning an iterator object remembers its position while iterating.
+	-> It can become out of sync if the underlying collection is changed while a code is using a iterator.
+	
+	1) Iterator<T>
+	2) Enum ThemeColor -> static class ThemeColorIterator implements Iterator<ThemeColor> 	
 
 **Observer**
 	-> Its a pub-sub modle. Its a one to many mapping between objects where one class will be observable and others will be observer.Whenever there is a state change notification will be sent to all observer object.
