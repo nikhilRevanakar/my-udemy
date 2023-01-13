@@ -1,11 +1,14 @@
 package com.learning;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
@@ -22,9 +25,17 @@ public class main {
 //      5 10 2 7 9 3 3 2 5
 //        [1, 1, 2, 1, 1, 2, 4, 5, 3]
 // 		[2, 2, 3, 3, 5, 5, 7, 9, 10]
-		
-		
-		TreeSet<Integer> p = new TreeSet<>();
+		HashSet<Character> set=new HashSet<>();
+		Character[] array = set.toArray(new Character[set.size()]);
+		String a = "";
+		a.compareTo("");
+		List list = new ArrayList<>();
+		list.add(10);
+		Object object = list.get(0);
+		Collections.sort(list);
+		String a = "anc";
+		a.charAt(0);
+		TreeSet p = new TreeSet<>();
 		p.add(30);
 		p.add(29);
 		p.add(88);
