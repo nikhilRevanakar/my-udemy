@@ -19,6 +19,9 @@ public class FspGroupServiceImpl {
 	}
 	
 	public FspGroup saveGroup(FspGroup fspGroup) {
+		fspGroup.hashCode();
+		fspGroup.equals(null);
+		
 		return fspGroupRepository.save(fspGroup);
 	}
 
